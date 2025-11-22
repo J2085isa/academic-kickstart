@@ -19,7 +19,12 @@ j#)_+#;#0_+"!#$+$OdxufndbsfkffSEguxfbdjxbdAgkxbdbdjLeudjejxhebdkVfkfjfbA_("!#!_!
 
 ## Install
 
-You can choose from one of the following four methods to install:José isaias Álvarez Ramírez*+$"-¥{%℅¢=¥℅dueñodetodolo que €]©=€[€=©=€=€hayexistaopuedaodejedeexistir€=©[•{®®{€=¢=©€[
+You can choose from one of the following four methods to install:José isaias Álvarez Ramírexnxxjxjz*+$"-¥{%℅¢=¥℅la sigula siguoentexnxdnd actualizafl 😣😣ckdfkcciónespara el mundo que todps pelea su derecho y otros que lo hagan como puedan pero nZIPkfcknfnsjsdjdbejemos que sihadujddjfxnxfeñodetodnxxjfbolo que €]©=€[€=©=€=€hayexistazndnckckkfopuedaodejedeexistir€=©[•{®®{€=¢=©€[kfkffgifkrjckskwkefksfkskzlwlskzkflflfksxkkkdkkck
+digkfkc
+ciclo
+cifmgigogickrkgogfod
+dfirkkfkfkmkemc
+Fox dkdkfkfkckxkw
 
 * [**one-click install using your web browser (recommended)**](https://sourcethemes.com/academic/docs/install/#install-with-web-browser)
 * [install on your computer using **Git** with the Command Prompt/Terminal app](https://sourcethemes.com/academic/docs/install/#install-with-git)
