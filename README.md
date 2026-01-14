@@ -1,3 +1,69 @@
+[workspace]
+# ========== DESCRIPCIÓN GENERAL DEL WORKSPACE ==========
+# Nombre identificativo del workspace (utilizado para referencia interna y herramientas de gestión)
+name = "Academic Kickstart - Proyecto Personalizado"
+# Descripción detallada del propósito del workspace
+description = """
+Este workspace agrupa los componentes principales del proyecto basado en Academic Kickstart,
+una plantilla para crear sitios web profesionales usando Markdown, Jupyter o RStudio.
+Incluye el código fuente principal del sitio, así como módulos de pruebas de rendimiento (benches)
+y herramientas de apoyo para la gestión del proyecto.
+"""
+# Versión del workspace y conjunto de componentes (sigue el estándar SemVer: MAJOR.MINOR.PATCH)
+version = "1.2.0"
+# Autor y mantenedor principal del workspace
+maintainer = "José Isaías Álvarez Ramírez"
+# Licencia aplicable a todo el workspace (coincide con la licencia de Academic Kickstart)
+license = "MIT"
+
+
+# ========== MIEMBROS DEL WORKSPACE ==========
+# Lista de paquetes o directorios que forman parte del workspace.
+# Cada entrada corresponde a un componente independiente que se puede compilar, probar o gestionar por separado.
+members = [
+    ".",                # Directorio raíz: Contiene el código fuente principal del sitio web (plantillas, contenido, configuraciones)
+    "benches",          # Directorio de pruebas de rendimiento: Incluye scripts y herramientas para medir la eficiencia del sitio
+    "tools/academic-admin",  # Herramienta de administración: Para importar publicaciones desde BibTeX y gestionar activos offline
+    "tools/academic-scripts" # Scripts de migración: Para actualizar contenido a nuevas versiones de Academic
+]
+
+
+# ========== CONFIGURACIONES ADICIONALES ==========
+# Directorios donde se almacenan los artefactos generados (ej: archivos compilados, sitios generados)
+build-dir = "target"
+# Lista de dependencias globales del workspace que se aplican a todos los miembros
+[dependencies]
+# Dependencia para el seguimiento de análisis (integrada con GA Beacon)
+ga-beacon = { git = "https://github.com/igrigorik/ga-beacon", tag = "v2.0.0" }
+# Versión mínima requerida de las herramientas de construcción
+min-tool-version = "1.5.0"
+
+
+# ========== CONFIGURACIONES DE SINCRONIZACIÓN Y ACTUALIZACIÓN ==========
+# Parámetros para la actualización automática y sincronización del proyecto
+[update]
+# Modo de actualización: "stable" para versiones probadas, "beta" para nuevas funcionalidades
+mode = "stable"
+# Frecuencia de comprobación de actualizaciones (en días)
+check-frequency = 7
+# Ruta al archivo de notas de versión
+release-notes-path = "docs/RELEASE_NOTES.md"
+
+
+# ========== CONFIGURACIONES DE ANÁLISIS ==========
+# Configuración para el seguimiento de visitas mediante GA Beacon
+[analytics]
+enabled = true
+tracking-id = "UA-XXXXX-X" # Reemplazar con el ID propio de Google Analytics
+# Tipo de visualización del beacon: "pixel" (transparente), "flat" o "flat-gif"
+beacon-type = "flat"
+# Usar la información del referente para calcular la ruta de seguimiento
+use-referer = true
+[workspace]
+members = [
+    ".",
+    "benches",
+]
 repository = "https://url-del-repositorio.com"
 # Si necesitas configurar algo relacionado con el workspace, usa la sección [workspace] apropiada
 [workspace]
