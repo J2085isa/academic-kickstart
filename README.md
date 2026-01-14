@@ -1,3 +1,9 @@
+Método	Endpoint	Propósito	Lenguajes compatibles
+POST		Automatizar commit, push y pull entre repositorios GitHub y sistema local	Python, JS, Java, C#, Go
+GET		Analizar código en busca de vulnerabilidades + cifrar fragmentos sensibles	Todos los lenguajes admitidos
+POST		Entrelazar lógica entre proyectos de diferentes lenguajes	Python ↔ JS, Java ↔ Python, etc.
+PUT		Aplicar políticas de protección al sistema local + respaldos cuánticos	Sistemas Windows, Linux, macOS
+GET		Monitorear estado de repositorios, código y seguridad en tiempo real	-
 [workspace]
 # ========== DESCRIPCIÓN GENERAL DEL WORKSPACE ==========
 # Nombre identificativo del workspace (utilizado para referencia interna y herramientas de gestión)
