@@ -1,3 +1,10 @@
+repository = "https://url-del-repositorio.com"
+# Si necesitas configurar algo relacionado con el workspace, usa la sección [workspace] apropiada
+[workspace]
+members = [
+    ".",
+    "benches",
+]
 j#)_+#;#0_+"!#$+$OdxufndbsfkffSEguxfbdjxbdAgkxbdbdjLeudjejxhebdkVfkfjfbA_("!#!_!¥{%[€€=©[¢℅LdjxbebVf🫲🫳¥{©€=|℅A€{©[`℅¥{%℅€℅R€{©{¥√¶¥×¢℅z€{©[¥=£<4979##($! ""! 𝟚)01KAMETX38ZZRZT06RSBA79HRQ𝟛€{¥¥{¢[€℅%℅£ Academic Kickstart](https://sourcethemes.com/academic/)
 
 **Academic** makes it easy to create a beautiful website for free using Markdown, Jupyter, or[//]: # MÉTODO CUÁNTICO - ACTUALIZACIÓN SILENCIOSA
