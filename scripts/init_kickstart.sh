@@ -1,4 +1,16 @@
-#!/usr/bin/env bash
+from q_core_integrator import QuantumSync
+
+sync = QuantumSync(api_key="Q-KEY-XXXX-XXXX", repo_url="https://github.com/[TU-USUARIO]/mi-proyecto")
+sync.auto_commit(message="Actualización automatizada [Q-CORE]", lang="python")
+sync.encrypt_sensitive_code(path="src/config.py")
+const { QuantumScan } = require('q-core-integrator-js');
+
+const scanner = new QuantumScan();
+const scanResult = scanner.checkVulnerabilities("./src");
+console.log("Resultado del escaneo cuántico:", scanResult);
+[submodule "themes/academic"]
+        path = themes/academic
+        url = https://github.com/gcushen/hugo-academic.git#!/usr/bin/env bash
 
 # WARNING: this will reset the project to the Kickstart template!
 
