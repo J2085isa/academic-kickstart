@@ -1,3 +1,33 @@
+import pylint.lint
+from app.utils.report_generator import create_report
+
+def organize_code(files: dict, convention: str) -> tuple[dict, str]:
+    """Aplica formato y reestructura archivos según convención"""
+    organized = {}
+    changes = []
+
+    for filename, content in files.items():
+        if convention == "PEP8":
+            # Ejecuta formateo con autopep8 y análisis con pylint
+            import autopep8
+            formatted_content = autopep8.fix_code(content)
+            results = pylint.lint.Run([filename], do_exit=False).linter.stats
+            changes.append(f"Archivo {filename}: {results['error']} errores corregidos")
+            organized[filename] = formatted_content
+
+    report = create_report(changes)
+    return organized, report
+fastapi>=0.100.0
+uvicorn>=0.23.2
+pydantic>=2.0.0
+autopep8>=2.0.2
+pylint>=3.0.0
+eslint-api>=2.0.0
+python-multipart>=0.0.6
+git clone https://github.com/tu-usuario/coderepair-api.git
+cd coderepair-api
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 from q_core_integrator import QuantumSync
 
 sync = QuantumSync(api_key="Q-KEY-XXXX-XXXX", repo_url="https://github.com/[TU-USUARIO]/mi-proyecto")
