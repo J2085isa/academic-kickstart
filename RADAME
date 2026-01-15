@@ -1,3 +1,22 @@
+import pylint.lint
+from app.utils.report_generator import create_report
+
+def organize_code(files: dict, convention: str) -> tuple[dict, str]:
+    """Aplica formato y reestructura archivos según convención"""
+    organized = {}
+    changes = []
+
+    for filename, content in files.items():
+        if convention == "PEP8":
+            # Ejecuta formateo con autopep8 y análisis con pylint
+            import autopep8
+            formatted_content = autopep8.fix_code(content)
+            results = pylint.lint.Run([filename], do_exit=False).linter.stats
+            changes.append(f"Archivo {filename}: {results['error']} errores corregidos")
+            organized[filename] = formatted_content
+
+    report = create_report(changes)
+    return organized, report
 from fastapi import FastAPI, UploadFile, File
 from app.services.code_organizer import organize_code
 from app.services.code_repairer import repair_code
