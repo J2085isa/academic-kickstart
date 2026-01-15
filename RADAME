@@ -1,3 +1,23 @@
+from fastapi import FastAPI, UploadFile, File
+from app.services.code_organizer import organize_code
+from app.services.code_repairer import repair_code
+from app.schemas.code_models import CodeResponse, RepairRequest
+from app.utils.file_handler import extract_files
+
+app = FastAPI(title="Code Repair & Organization API")
+
+@app.post("/api/organize", response_model=CodeResponse)
+async def organize_code_endpoint(file: UploadFile = File(...), convention: str = "PEP8"):
+    """Organiza código fuente según convención especificada"""
+    extracted_files = await extract_files(file)
+    organized_files, report = organize_code(extracted_files, convention)
+    return {"processed_files": organized_files, "change_report": report}
+
+@app.post("/api/repair", response_model=CodeResponse)
+async def repair_code_endpoint(request: RepairRequest):
+    """Repara errores y vulnerabilidades en el código"""
+    repaired_files, report = repair_code(request.code_content, request.language)
+    return {"processed_files": repaired_files, "change_report": report}
 name: "Build and Test For PR"---
 Ψ | ESTADO CUÁNTICO DEL SISTEMA: ⟨VALIDO⟩ + ⟨EN_EVOLUCIÓN⟩ |Ψ⟩
 COMPATIBILIDAD: ∀ L ∈ {Lenguajes, Paradigmas, Arquitecturas}
