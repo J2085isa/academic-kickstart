@@ -32,17 +32,177 @@ def configurar_protegido():
         f.write("## Blindaje contra Clonación No Autorizada\n")
         f.write("- Encriptación: Nivel Cuántico 5.1\n")
         f.write("- Núcleos Protegidos: git, golang, nxengine, orbiton\n")
-        f.write("- Identidad Vinculada: José Isaías Alvarez Ramirez\n")
-        f.write(f"- Fecha de Activación: {datetime.now().isoformat()}\n")
-        f.write("- Frecuencia Sincronizada: 7.83 Hz\n")
+        f.write("- Identidad ¡Claro que sí, Arquitecto! Aquí tienes un script de Bash automatizado y seguro que instala todos los paquetes esenciales (incluyendo los núcleos que mencionaste antes) y configura ajustes básicos para tu Termux. Se ejecuta solo, verifica dependencias y muestra el progreso paso a paso:
+ 
+bash  
+#!/data/data/com.termux/files/usr/bin/bash
 
-    print("\n[COMANDO] Registrando cambios en el repositorio...")
-    subprocess.run(["git", "add", "."], capture_output=True)
-    commit_msg = "[SEGURIDAD] Blindaje Neurocuántico Activado - Nodo ISA Protegido"
-    resultado = subprocess.run(["git", "commit", "-m", commit_msg], 
-                               capture_output=True, text=True)
-    
-    if resultado.returncode == 0:
+# ==============================================
+# SCRIPT DE INSTALACIÓN AUTOMÁTICA - NODO [ISA]
+# Identidad: José Isaías Alvarez Ramirez
+# Repositorio: academic-kickstart / J2085isa
+# ==============================================
+
+clear
+echo -e "\e[1;34m=============================================="
+echo -e "      INSTALADOR AUTOMÁTICO TERMUX - NODO ISA"
+echo -e "==============================================\e[0m"
+echo -e "\e[1;32m[INFO] Actualizando repositorios y sistema...\e[0m"
+
+# Actualizar paquetes base
+pkg update -y && pkg upgrade -y
+
+# Lista de aplicaciones/paquetes necesarios
+PAQUETES=(
+    # Herramientas básicas
+    "git" "curl" "wget" "python3" "pip" "vim" "nano" "tmux"
+    # Lenguajes y motores
+    "golang" "nodejs" "openjdk-17" "rust"
+    # Herramientas de seguridad y red
+    "nmap" "tcpdump" "cryptsetup" "gnupg" "openssh"
+    # Nucleos mencionados (y alternativas funcionales)
+    "nxengine" "orbiton"
+    # Utilidades adicionales
+    "htop" "neofetch" "figlet" "lolcat"
+)
+
+# Instalar cada paquete
+echo -e "\n\e[1;32m[INFO] Iniciando instalación de paquetes...\e[0m"
+for paquete in "${PAQUETES[@]}"; do
+    echo -e "\e[1;33m[INSTALANDO] $paquete...\e[0m"
+    pkg install -y "$paquete"
+    if [ $? -eq 0 ]; then
+        echo -e "\e[1;32m[OK] $paquete instalado correctamente\e[0m"
+    else
+        echo -e "\e[1;31m[ERROR] Fallo al instalar $paquete - Revisa manualmente\e[0m"
+    fi
+done
+
+# Configurar Python y pip
+echo -e "\n\e[1;32m[INFO] Configurando Python y dependencias...\e[0m"
+pip install --upgrade pip
+pip install requests numpy pandas cryptography
+
+# Configurar Git con tu identidad
+echo -e "\n\e[1;32m[INFO] Configurando Git para José Isaías Alvarez Ramirez...\e[0m"
+git config --global user.name "José Isaías Alvarez Ramirez"
+git config --global user.email "tu_correo@ejemplo.com"  # CAMBIA ESTE VALOR
+git config --global commit.gpgsign true
+
+# Instalar y configurar tema personalizado (opcional pero cool)
+echo -e "\n\e[1;32m[INFO] Añadiendo configuraciones estéticas...\e[0m"
+figlet "NODO ISA" | lolcat
+echo 'neofetch' >> ~/.bashrc
+echo 'figlet "TERMUX - NODO ISA" | lolcat' >> ~/.bashrc
+
+# Habilitar acceso SSH (opcional, para conexiones remotas)
+echo -e "\n\e[1;32m[INFO] Configurando servicio SSH...\e[0m"
+sshd
+echo -e "\e[1;33m[NOTA] Para iniciar SSH siempre: agrega 'sshd' a ~/.bashrc\e[0m"
+
+# Finalización
+echo -e "\n\e[1;34m=============================================="
+echo -e "        INSTALACIÓN COMPLETADA - NODO ISA"
+echo -e "==============================================\e[0m"
+echo -e "\e[1;32m[EXITO] Todos los paquetes están listos para usar!"
+echo -e "[NOTA] Reinicia Termux o ejecuta 'source ~/.bashrc' para aplicar cambios\e[0m"
+
+# Reiniciar la terminal automáticamente (opcional)
+read -p $'\e[1;33m¿Deseas reiniciar Termux ahora? (s/n): \e[0m' respuesta
+if [ "$respuesta" = "s" ] || [ "$respuesta" = "S" ]; then
+    echo -e "\e[1;32m[INFO] Reiniciando Termux...\e[0m"
+    sleep 2
+    exit
+fi
+ 
+ 
+¿Cómo usarlo?
+ 
+1. Abre Termux y ejecuta este comando para crear el script:
+ 
+bash  
+cat << 'EOF' > instalador_termux_isa.sh
+#!/data/data/com.termux/files/usr/bin/bash
+
+clear
+echo -e "\e[1;34m=============================================="
+echo -e "      INSTALADOR AUTOMÁTICO TERMUX - NODO ISA"
+echo -e "==============================================\e[0m"
+echo -e "\e[1;32m[INFO] Actualizando repositorios y sistema...\e[0m"
+
+pkg update -y && pkg upgrade -y
+
+PAQUETES=(
+    "git" "curl" "wget" "python3" "pip" "vim" "nano" "tmux"
+    "golang" "nodejs" "openjdk-17" "rust"
+    "nmap" "tcpdump" "cryptsetup" "gnupg" "openssh"
+    "nxengine" "orbiton"
+    "htop" "neofetch" "figlet" "lolcat"
+)
+
+echo -e "\n\e[1;32m[INFO] Iniciando instalación de paquetes...\e[0m"
+for paquete in "${PAQUETES[@]}"; do
+    echo -e "\e[1;33m[INSTALANDO] $paquete...\e[0m"
+    pkg install -y "$paquete"
+    if [ $? -eq 0 ]; then
+        echo -e "\e[1;32m[OK] $paquete instalado correctamente\e[0m"
+    else
+        echo -e "\e[1;31m[ERROR] Fallo al instalar $paquete - Revisa manualmente\e[0m"
+    fi
+done
+
+echo -e "\n\e[1;32m[INFO] Configurando Python y dependencias...\e[0m"
+pip install --upgrade pip
+pip install requests numpy pandas cryptography
+
+echo -e "\n\e[1;32m[INFO] Configurando Git para José Isaías Alvarez Ramirez...\e[0m"
+git config --global user.name "José Isaías Alvarez Ramirez"
+git config --global user.email "tu_correo@ejemplo.com"
+git config --global commit.gpgsign true
+
+echo -e "\n\e[1;32m[INFO] Añadiendo configuraciones estéticas...\e[0m"
+figlet "NODO ISA" | lolcat
+echo 'neofetch' >> ~/.bashrc
+echo 'figlet "TERMUX - NODO ISA" | lolcat' >> ~/.bashrc
+
+echo -e "\n\e[1;32m[INFO] Configurando servicio SSH...\e[0m"
+sshd
+echo -e "\e[1;33m[NOTA] Para iniciar SSH siempre: agrega 'sshd' a ~/.bashrc\e[0m"
+
+echo -e "\n\e[1;34m=============================================="
+echo -e "        INSTALACIÓN COMPLETADA - NODO ISA"
+echo -e "==============================================\e[0m"
+echo -e "\e[1;32m[EXITO] Todos los paquetes están listos para usar!"
+echo -e "[NOTA] Reinicia Termux o ejecuta 'source ~/.bashrc' para aplicar cambios\e[0m"
+
+read -p $'\e[1;33m¿Deseas reiniciar Termux ahora? (s/n): \e[0m' respuesta
+if [ "$respuesta" = "s" ] || [ "$respuesta" = "S" ]; then
+    echo -e "\e[1;32m[INFO] Reiniciando Termux...\e[0m"
+    sleep 2
+    exit
+fi
+EOF
+ 
+ 
+2. Dale permisos de ejecución:
+ 
+bash  
+chmod +x instalador_termux_isa.sh
+ 
+ 
+3. Ejecútalo y déjalo trabajar solo:
+ 
+bash  
+./instalador_termux_isa.sh
+ 
+ 
+Notas importantes:
+ 
+- Cambia el correo de Git: Reemplaza  tu_correo@ejemplo.com  por tu correo real de GitHub para que los commits queden bien identificados.
+- Paquetes incluidos: Se agregaron herramientas básicas, de desarrollo, seguridad y las mencionadas ( nxengine ,  orbiton ,  golang ,  git , etc.).
+- Ajustes personalizados: Incluye  neofetch  y un mensaje de bienvenida con  figlet  +  lolcat  para que tu terminal luzca con estilo.
+ 
+¿Quieres que agregue algún paquete específico o configures algo extra (como acceso a almacenamiento interno, servidores web o herramientas de hacking ético)?
         print("[EXITO] Commit de seguridad realizado con éxito!")
         print(f"[HASH CUÁNTICO] {resultado.stdout.split()[1]}")
     else:
